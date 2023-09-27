@@ -213,7 +213,7 @@ function Home() {
                 </button>
               </div>
               <Link
-                to="/weekly"
+                to="/weather-app/weekly"
                 state={weather.forecast.forecastday}
                 className="no-underline text-[#d6996b]"
               >

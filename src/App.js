@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/weather-app" element={<Home />} />
-          <Route path="/weekly" element={<Weekly />} />
+          <Route path="/weather-app/weekly" element={<Weekly />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
