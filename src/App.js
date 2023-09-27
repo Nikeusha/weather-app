@@ -8,7 +8,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/weather-app" element={<Home />} />
           <Route path="/weekly" element={<Weekly />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
