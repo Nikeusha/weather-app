@@ -9,7 +9,7 @@ function NotFound() {
           Page not found
         </h1>
         <div className="text-center mt-[10px]">
-          <Link to="/weather-app" className="py-[8px] px-[15px] transition-all text-[#303345] font-semibold hover:bg-[#ffe6c4dd] text-[12px] no-underline rounded bg-[#ffe6c4b0]">Homepage</Link>
+          <Link to="/" className="py-[8px] px-[15px] transition-all text-[#303345] font-semibold hover:bg-[#ffe6c4dd] text-[12px] no-underline rounded bg-[#ffe6c4b0]">Homepage</Link>
         </div>
       </div>
     </div>
