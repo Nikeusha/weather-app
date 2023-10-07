@@ -22,7 +22,7 @@ function HourBox({ hour, localtime, changeIndex, index }) {
         {isEqual ? "now" : hour.time.slice(-5)}
       </p>
       <div className="">
-        <img className="w-[30px] h-[30px] sm:w-[24px] sm:h-[24px] " src={condition.icon} alt="condition" />
+        <img className="w-[30px] h-[30px] sm:w-[24px] sm:h-[24px] " src={condition.icon} alt={condition.text} />
       </div>
       <p className="text-[12px] sm:text-[7px] font-bold leading-[8.47px] text-center text-[#303345]">{Math.round(hour.temp_c)} °</p>
     </div>

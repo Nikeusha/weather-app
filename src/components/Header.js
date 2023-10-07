@@ -5,7 +5,7 @@ import point from "../assets/icons/point.png";
 import Turnstone from "turnstone";
 import { listbox, styles } from "../utils/turnstoneUtil";
 
-function Header({setCity}) {
+function Header({ setCity }) {
   const [searchValue, setSearchValue] = useState("Tashkent");
   const [isSearchActive, setIsSearchActive] = useState(false);
   const searchRef = useRef();
@@ -16,6 +16,12 @@ function Header({setCity}) {
       setCity(searchValue);
     }
   };
+
+  const onSelected = (item) => {
+    if(item?.name) {
+      setCity(item?.name)
+    }
+  }
 
   const handleChange = (value) => {
     setSearchValue(value);
@@ -38,13 +44,17 @@ function Header({setCity}) {
   }, [isSearchActive]);
 
   return (
-    <div className="w-full h-[60px] sm:h-[48px] flex justify-between items-center py-[16px] sm:py-[12px] px-[15px] sm:px-[11px] ">
-      <div className="">
+    <header className="w-full h-[60px] sm:h-[48px] flex justify-between items-center py-[16px] sm:py-[12px] px-[15px] sm:px-[11px] ">
+      <div>
         <button
           onClick={() => setIsSearchActive(true)}
           className="main-header-icon relative z-[50]"
         >
-          <img className="w-[20px] h-[20px] sm:w-[14.99px] sm:h-[14.56px]" src={searchIcon} alt="search-icon" />
+          <img
+            className="w-[20px] h-[20px] sm:w-[14.99px] sm:h-[14.56px]"
+            src={searchIcon}
+            alt="search-icon"
+          />
         </button>
         {isSearchActive && (
           <div
@@ -73,6 +83,7 @@ function Header({setCity}) {
               matchText={true}
               onEnter={onEnter}
               onChange={handleChange}
+              onSelect={onSelected}
               noItemsMessage="No matching city"
             />
           </div>
@@ -82,9 +93,13 @@ function Header({setCity}) {
         <img className="w-full sm:w-auto" src={point} alt="point" />
       </div>
       <div className="main-header-icon">
-        <img className="w-[20px] h-[20px] sm:w-[14.99px] sm:h-[14.56px]" src={navIcon} alt="nav-icon" />
+        <img
+          className="w-[20px] h-[20px] sm:w-[14.99px] sm:h-[14.56px]"
+          src={navIcon}
+          alt="nav-icon"
+        />
       </div>
-    </div>
+    </header>
   );
 }
 

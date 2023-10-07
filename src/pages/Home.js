@@ -91,22 +91,26 @@ function Home() {
   };
 
   return (
-    <div className="main overflow-hidden">
+    <main className="main overflow-hidden">
       <Header setCity={setCity} />
       {isLoading && <Preloader />}
       {isSuccess && (
-        <>
+        <section>
           <div className="w-full mt-[10px] sm:mt-0 py-[8px] px-[18px]">
             <h1 className="text-[30px] sm:text-[20px] font-medium text-[#313341] leading-[32px] sm:leading-[24.2px] w-[50%] sm:w-[130px]  ">
               {weather.location.country}, {weather.location.name}
             </h1>
-            <p className="mt-[10px] font-normal sm:mt-[5px] text-[14px] sm:text-[9px] text-[#9a938c] ">
+            <h3 className="mt-[10px] font-normal sm:mt-[5px] text-[14px] sm:text-[9px] text-[#9a938c] ">
               {getDate()}
-            </p>
+            </h3>
           </div>
           <div className="w-full mt-[15px] sm:mt-0 flex justify-around sm:justify-between items-center py-[4px] px-[30px]">
             <div className="w-[100px] h-[100px] sm:w-[88px] sm:h-[85px] ">
-              <img className="w-full h-full" src={condition.icon} alt="condition" />
+              <img
+                className="w-full h-full"
+                src={condition.icon}
+                alt={condition.text}
+              />
             </div>
             <div className="flex sm:basis-[50%]">
               <div className="flex flex-col items-center justify-center">
@@ -257,7 +261,7 @@ function Home() {
               })}
             </Flickity>
           </div>
-        </>
+        </section>
       )}
       {isError && (
         <div className="absolute top-0 w-full h-full flex justify-center items-center">
@@ -268,7 +272,7 @@ function Home() {
           </div>
         </div>
       )}
-    </div>
+    </main>
   );
 }
 

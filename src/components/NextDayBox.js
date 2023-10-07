@@ -12,7 +12,7 @@ function NextDayBox() {
           22 °
         </p>
         <div className="w-[40px] h-[40px] sm:w-[24px] sm:h-[24px] ">
-          <img className="w-full h-full" src={sun} alt="condition" />
+          <img className="w-full h-full" src={sun} alt="Sunny" />
         </div>
       </div>
     </div>

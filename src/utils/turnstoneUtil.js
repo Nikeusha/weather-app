@@ -34,5 +34,5 @@ export const styles = {
   highlightedItem:
     "cursor-pointer p-1.5 text-[16px] sm:text-[14px] overflow-ellipsis overflow-hidden text-oldsilver-700 rounded bg-crystal-100",
   match: "",
-  noItems: "cursor-default text-[18px] text-center my-[20px]",
+  noItems: "cursor-default text-[18px] sm:text-[16px] text-center my-[20px]",
 };
